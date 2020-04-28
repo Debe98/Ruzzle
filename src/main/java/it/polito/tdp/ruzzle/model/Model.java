@@ -1,4 +1,4 @@
-package it.polito.tdp.ruzzle.model;
+ package it.polito.tdp.ruzzle.model;
 
 import java.util.List;
 
