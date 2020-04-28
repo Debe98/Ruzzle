@@ -15,7 +15,7 @@ import javafx.beans.property.StringProperty;
  */
 public class Board {
 	private List<Pos> positions;
-	private Map<Pos, StringProperty> cells;
+	private Map<Pos, StringProperty> cells;	//SP per binding automatico con interfaccia grafica
 
 	private int size;
 
@@ -70,7 +70,9 @@ public class Board {
 		for(Pos p: this.positions) {
 			int random = (int)(Math.random()*26) ;
 			String letter = Character.toString((char)('A'+random)) ;
-			this.cells.get(p).set(letter); 
+			this.cells.get(p).set(letter); 	
+			//GRAZIE al binding nel controller questo set cambia 
+			//direttamente l'interfaccia grafica dell'applicazione!
 		}
 	}
 	
